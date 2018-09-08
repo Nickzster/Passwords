@@ -1,12 +1,15 @@
 #include <iostream>
 #include <string>
 #include "User.h"
+#include <cstdlib>
 using namespace std;
 
 string inputPassword() //Hides the input of the password in the console.
 {
 	string passWord;
+	system("stty -echo");
 	cin >> passWord;
+	system("stty echo");
 	return passWord;
 }
 
